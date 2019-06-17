@@ -1,0 +1,11 @@
+<h2>
+  Listado empleados
+</h2>
+<div *ngIf="! empleados.length">No hay empleados por el momento</div>
+<div>
+  <article *ngFor="let empleado of empleados">
+    <span>{{empleado.nombre}}</span>
+    <span>{{empleado.apellido}}</span>
+    <span>{{empleado.direccion}}</span>
+  </article>
+</div>

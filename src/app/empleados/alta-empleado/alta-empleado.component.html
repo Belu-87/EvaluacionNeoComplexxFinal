@@ -1,0 +1,16 @@
+<h2>Alta Empleado</h2>
+<p>
+  <span>Nombre:</span>
+  	<input type="text" [(ngModel)]="empleado.nombre"> 
+</p>
+<p>
+  <span>Apellido:</span>
+  <input type="text" [(ngModel)]="empleado.apellido">
+</p>
+<p>
+  <span>Dirección:</span>
+  <input type="text" [(ngModel)]="empleado.direccion">
+</p>
+<p>
+  <button (click)="this.nuevoEmpleado()">Guardar</button>
+</p>
