@@ -1,11 +1,24 @@
 <h2>
   Listado empleados
 </h2>
+
 <div *ngIf="! empleados.length">No hay empleados por el momento</div>
-<div>
-  <article *ngFor="let empleado of empleados">
-    <span>{{empleado.nombre}}</span>
-    <span>{{empleado.apellido}}</span>
-    <span>{{empleado.direccion}}</span>
-  </article>
-</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Direccion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let empleado of empleados; index as i">
+    <th scope="row" style="color: black">{{ i + 1 }}</th>
+    <td>{{empleado.nombre}}</td>
+    <td>{{empleado.apellido}}</td>
+    <td>{{empleado.direccion}}</td>
+  </tr>
+  </tbody>
+</table>

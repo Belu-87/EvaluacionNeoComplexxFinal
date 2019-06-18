@@ -1,16 +1,18 @@
 <h2>Alta Empleado</h2>
-<p>
-  <span>Nombre:</span>
-  	<input type="text" [(ngModel)]="empleado.nombre"> 
-</p>
-<p>
-  <span>Apellido:</span>
-  <input type="text" [(ngModel)]="empleado.apellido">
-</p>
-<p>
-  <span>Dirección:</span>
-  <input type="text" [(ngModel)]="empleado.direccion">
-</p>
-<p>
-  <button (click)="this.nuevoEmpleado()">Guardar</button>
-</p>
+<div class="center">
+  <p>
+  	<span>Nombre:</span>
+  	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.nombre">
+  </p>
+  <p>
+	<span>Apellido:</span>
+	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.apellido">
+  </p>
+  <p>
+	<span>Dirección:</span>
+	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.direccion">
+  </p>
+  <p>
+	<button class="btn btn-outline-primary mr-2" (click)="this.nuevoEmpleado();">Guardar</button>
+  </p>
+</div>
