@@ -2,23 +2,26 @@
   Listado empleados
 </h2>
 
-<div *ngIf="! empleados.length">No hay empleados por el momento</div>
-
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Nombre</th>
-    <th scope="col">Apellido</th>
-    <th scope="col">Direccion</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let empleado of empleados; index as i">
-    <th scope="row" style="color: black">{{ i + 1 }}</th>
-    <td>{{empleado.nombre}}</td>
-    <td>{{empleado.apellido}}</td>
-    <td>{{empleado.direccion}}</td>
-  </tr>
-  </tbody>
-</table>
+<div *ngIf="empleados!=null; else espera">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Salario</th>
+      <th scope="col">Antiguedad</th>
+      <th scope="col">Imagen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let empleado of empleados; index as i">
+      <th scope="row" style="color: black">{{ i + 1 }}</th>
+      <td>{{empleado.employee_name}}</td>
+      <td>{{empleado.employee_salary}}</td>
+      <td>{{empleado.employee_age}}</td>
+      <td>{{empleado.profile_image}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>

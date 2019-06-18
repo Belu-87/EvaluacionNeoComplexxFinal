@@ -1,18 +1,23 @@
 <h2>Alta Empleado</h2>
 <div class="center">
   <p>
-  	<span>Nombre:</span>
-  	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.nombre">
+    <span>Nombre:</span>
+    <input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.employee_name">
   </p>
   <p>
-	<span>Apellido:</span>
-	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.apellido">
+    <span>Salario:</span>
+    <input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.employee_salary">
   </p>
   <p>
-	<span>Dirección:</span>
-	<input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.direccion">
+    <span>Antiguedad:</span>
+    <input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.employee_age">
   </p>
   <p>
-	<button class="btn btn-outline-primary mr-2" (click)="this.nuevoEmpleado();">Guardar</button>
+    <span>Imagen de perfil:</span>
+    <input id="typeahead-config" type="text" class="form-control" [(ngModel)]="empleado.profile_image">
+  </p>
+  <p>
+    <button class="btn btn-outline-primary mr-2" (click)="this.nuevoEmpleado();">Guardar
+    </button>
   </p>
 </div>

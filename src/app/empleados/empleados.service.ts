@@ -1,29 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Empleado } from './empleados.model';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class EmpleadosService {
 
   private empleados: Empleado[];
 
-  constructor() {
-    this.empleados = [];
+  constructor(private http: HttpClient) {
+    
   }
 
   getEmpleados() {
-    return this.empleados;
+    return this.http.get("http://dummy.restapiexample.com/api/v1/employees");
   }
 
-  agregarEmpleado(empleado: Empleado) {
-    this.empleados.push(empleado);
-  }
-
-  nuevoEmpleado(): Empleado {
-    return {
-      id: this.empleados.length,
-      nombre: '',
-      apellido: '',
-      direccion: ''
-    };
-  }
+  
 }

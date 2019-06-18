@@ -1,4 +1,3 @@
-
 import { Empleado } from './../empleados.model';
 import { EmpleadosService } from './../empleados.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,11 +15,8 @@ export class AltaEmpleadoComponent implements OnInit {
   constructor(private empleadosService: EmpleadosService) { }
 
   ngOnInit() {
-  	this.empleado = this.empleadosService.nuevoEmpleado();
+  	
   }
 
-  nuevoEmpleado(): void {
-  	this.empleadosService.agregarEmpleado(this.empleado);
-  	this.empleado = this.empleadosService.nuevoEmpleado();
-  }
+  
 }

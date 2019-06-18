@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listado-empleados.component.css']
 })
 export class ListadoEmpleadosComponent implements OnInit {
-  
-  empleados: Empleado[];
+
+  private empleados: null;
+
   constructor(private empleadosService: EmpleadosService) { }
 
   ngOnInit() {
-  	this.empleados = this.empleadosService.getEmpleados();
+  	this.empleadosService.getEmpleados()
+  		.subscribe( result => this.empleados = result)
   }
 
 }
